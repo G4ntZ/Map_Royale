@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  gap: 2rem; /* Separación entre columnas */
+  align-items: start;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.versus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.team {
+  flex: 1;
+  text-align: center;
+}
+
+.team ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team li {
+  margin: 0.3rem 0;
+  font-weight: bold;
+}
+
+.vs-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4757;
+  padding: 0 1rem;
+}
