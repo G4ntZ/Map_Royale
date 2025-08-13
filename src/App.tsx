@@ -5,9 +5,7 @@ import { fetchGameMaps } from './services/gameMaps';
 import type { GameMode, GameMap } from './types';
 
 function App() {
-  const [modes, setModes] = useState<GameMode[]>([]);
   const [modeRandom, setModeRandom] = useState<GameMode | null>(null);
-  const [maps, setMaps] = useState<GameMap[]>([]);
   const [mapRandom, setMapRandom] = useState<GameMap | null>(null);
 
   const [playersInput, setPlayersInput] = useState("");
@@ -24,12 +22,10 @@ function App() {
           mode.TeamSize === 3 &&
           mode.TeamCount === 2
       );
-      setModes(enabledModes);
 
       // 2️⃣ Traer mapas
       const mapsData = await fetchGameMaps();
       const enabledMaps = Object.values(mapsData).filter((map) => !map.Disabled);
-      setMaps(enabledMaps);
 
       // 3️⃣ Modo aleatorio
       let randomMode: GameMode | null = null;
